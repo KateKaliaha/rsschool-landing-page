@@ -8,15 +8,107 @@
       content="Explore the Coffee House menu and find your favorite drink or dessert."
     >
     <title>Menu | Coffee House</title>
+    <link rel="icon" href="../assets/icons/coffee-cup.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/menu.css">
     <script src="../js/theme.js" defer></script>
   </head>
   <body>
-    <header></header>
-    <main>
+    <header class="header container">
+      <a class="logo" href="../" aria-label="Coffee House home page">
+        <img class="logo__image logo__image--light" src="../assets/icons/logo-light.svg" alt="">
+        <img class="logo__image logo__image--dark" src="../assets/icons/logo-dark.svg" alt="">
+      </a>
+
+      <nav class="navigation" aria-label="Main navigation">
+        <ul class="navigation__list">
+          <li><a class="navigation__link" href="../#favorite">Favorite coffee</a></li>
+          <li><a class="navigation__link" href="../#about">About</a></li>
+          <li><a class="navigation__link" href="../#mobile-app">Mobile app</a></li>
+          <li><a class="navigation__link" href="#contacts">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="theme-switch" role="group" aria-label="Color theme">
+          <button
+            class="theme-switch__button theme-switch__button--light"
+            type="button"
+            data-theme-value="light"
+            aria-label="Use light theme"
+          ></button>
+          <button
+            class="theme-switch__button theme-switch__button--dark"
+            type="button"
+            data-theme-value="dark"
+            aria-label="Use dark theme"
+          ></button>
+        </div>
+
+        <a class="menu-link menu-link--current" href="./" aria-current="page">
+          <span>Menu</span>
+          <span class="icon icon--coffee-cup" aria-hidden="true"></span>
+        </a>
+
+        <button class="burger-button" type="button" aria-label="Open menu">
+          <span class="icon icon--burger" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="container">
       <h1>Coffee House menu</h1>
     </main>
-    <footer></footer>
+
+    <footer class="footer container" id="contacts">
+      <div class="footer__inner">
+        <div class="footer__socials">
+          <h2 class="footer__title">
+            Sip, Savor, Smile. <span class="accent">It’s coffee time!</span>
+          </h2>
+          <ul class="social-list" aria-label="Social media">
+            <li>
+              <a class="social-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <span class="icon icon--twitter" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <span class="icon icon--instagram" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <span class="icon icon--facebook" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contacts">
+          <h3 class="contacts__title">Contact us</h3>
+          <address>
+            <ul class="contacts__list">
+              <li>
+                <a class="contacts__link" href="https://maps.google.com/?q=8558+Green+Rd,+LA" target="_blank" rel="noopener noreferrer">
+                  <span class="icon icon--location" aria-hidden="true"></span>
+                  <span>8558 Green Rd., LA</span>
+                </a>
+              </li>
+              <li>
+                <a class="contacts__link" href="tel:+16035550123">
+                  <span class="icon icon--phone" aria-hidden="true"></span>
+                  <span>+1 (603) 555-0123</span>
+                </a>
+              </li>
+              <li class="contacts__item">
+                <span class="icon icon--clock" aria-hidden="true"></span>
+                <span>Mon-Sat: 9:00 AM – 23:00 PM</span>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
