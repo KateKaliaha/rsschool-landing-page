@@ -55,8 +55,126 @@
       </div>
     </header>
 
-    <main class="container">
-      <h1>Coffee House</h1>
+    <main class="home-main container">
+      <section class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            <span class="accent">Enjoy</span> premium coffee at our charming cafe
+          </h1>
+          <p class="hero__description">
+            With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.
+          </p>
+          <a class="primary-button" href="./menu/">
+            <span>Menu</span>
+            <span class="icon icon--coffee-cup" aria-hidden="true"></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="favorite" id="favorite">
+        <h2 class="section-title section-title--center">
+          Choose your <span class="accent">favorite</span> coffee
+        </h2>
+
+        <div class="slider">
+          <div class="slider__row">
+            <button class="round-button slider__button" type="button" aria-label="Previous coffee">
+              <span class="icon icon--arrow-left" aria-hidden="true"></span>
+            </button>
+
+            <div class="slider__viewport">
+              <article class="favorite-slide">
+                <img class="favorite-slide__image" src="./assets/images/favorite-1.webp" alt="S’mores Frappuccino">
+                <div class="favorite-slide__description">
+                  <h3 class="favorite-slide__title">S’mores Frappuccino</h3>
+                  <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                  <p class="favorite-slide__price">$5.50</p>
+                </div>
+              </article>
+
+              <article class="favorite-slide" hidden>
+                <img class="favorite-slide__image" src="./assets/images/favorite-2.webp" alt="Caramel Macchiato">
+                <div class="favorite-slide__description">
+                  <h3 class="favorite-slide__title">Caramel Macchiato</h3>
+                  <p>Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                  <p class="favorite-slide__price">$5.00</p>
+                </div>
+              </article>
+
+              <article class="favorite-slide" hidden>
+                <img class="favorite-slide__image" src="./assets/images/favorite-3.webp" alt="Ice coffee">
+                <div class="favorite-slide__description">
+                  <h3 class="favorite-slide__title">Ice coffee</h3>
+                  <p>A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                  <p class="favorite-slide__price">$4.50</p>
+                </div>
+              </article>
+            </div>
+
+            <button class="round-button slider__button" type="button" aria-label="Next coffee">
+              <span class="icon icon--arrow-right" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="slider__pagination" role="group" aria-label="Slide 1 of 3">
+            <span class="slider__control slider__control--active"></span>
+            <span class="slider__control"></span>
+            <span class="slider__control"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <h2 class="section-title">
+          Resource is <span class="accent">the perfect and cozy place</span> where you can enjoy a variety of hot beverages, relax, catch up with friends, or get some work done.
+        </h2>
+
+        <div class="about__gallery">
+          <div class="about__column">
+            <div class="about__image-box about__image-box--large">
+              <img src="./assets/images/about-1.webp" alt="Woman enjoying coffee in the cafe">
+            </div>
+            <div class="about__image-box about__image-box--small">
+              <img src="./assets/images/about-2.webp" alt="Coffee and warm lights in the cafe">
+            </div>
+          </div>
+          <div class="about__column">
+            <div class="about__image-box about__image-box--small">
+              <img src="./assets/images/about-3.webp" alt="Guest working in the cafe">
+            </div>
+            <div class="about__image-box about__image-box--large">
+              <img src="./assets/images/about-4.webp" alt="Couple having coffee together">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="mobile-app" id="mobile-app">
+        <div class="mobile-app__content">
+          <h2 class="section-title"><span class="accent">Download</span> our app<br>to start ordering</h2>
+          <p>
+            Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are
+          </p>
+          <div class="mobile-app__buttons">
+            <a class="store-button" href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
+              <span class="store-button__icon icon--app-store" aria-hidden="true"></span>
+              <span class="store-button__text">
+                <span class="store-button__caption">Available on the</span>
+                <span>App Store</span>
+              </span>
+            </a>
+            <a class="store-button" href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+              <span class="store-button__icon icon--google-play" aria-hidden="true"></span>
+              <span class="store-button__text">
+                <span class="store-button__caption">Available on</span>
+                <span>Google Play</span>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <img class="mobile-app__image" src="./assets/images/mobile-screens.webp" alt="Coffee House mobile application">
+      </section>
     </main>
 
     <footer class="footer container" id="contacts">
@@ -102,7 +220,7 @@
               </li>
               <li class="contacts__item">
                 <span class="icon icon--clock" aria-hidden="true"></span>
-                <span>Mon-Sat: 9:00 AM – 23:00 PM</span>
+                <span>Mon–Sat: 9:00–23:00</span>
               </li>
             </ul>
           </address>
