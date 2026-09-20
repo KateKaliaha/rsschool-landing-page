@@ -211,6 +211,7 @@ main:focus-visible {
   flex: none;
   width: 100px;
   height: 60px;
+  transition: opacity var(--transition-duration) ease;
 }
 
 .logo__image {
@@ -296,6 +297,7 @@ main:focus-visible {
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  transition: transform var(--transition-duration) ease;
 }
 
 .theme-switch__button--light {
@@ -333,8 +335,12 @@ main:focus-visible {
   padding: 0;
   border: 1px solid var(--color-border-inverse);
   border-radius: 50%;
+  color: var(--color-text);
   background: transparent;
   cursor: pointer;
+  transition:
+    color var(--transition-duration) ease,
+    background-color var(--transition-duration) ease;
 }
 
 .home-main {
@@ -692,6 +698,14 @@ main:focus-visible {
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .logo:hover {
+    opacity: 0.75;
+  }
+
+  .theme-switch__button:hover {
+    transform: scale(1.08);
+  }
+
   .navigation__link:hover::after,
   .menu-link:hover::after,
   .contacts__link:hover::after {
@@ -711,7 +725,8 @@ main:focus-visible {
   }
 
   .round-button:hover,
-  .store-button:hover {
+  .store-button:hover,
+  .burger-button:hover {
     color: var(--color-background);
     background-color: var(--color-border-inverse);
   }
