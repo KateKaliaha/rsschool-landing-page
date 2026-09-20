@@ -56,8 +56,139 @@
       </div>
     </header>
 
-    <main class="container">
-      <h1>Coffee House menu</h1>
+    <main class="menu-main container">
+      <section class="menu-section">
+        <div class="menu-offer">
+          <h1 class="menu-title">
+            Behind each of our cups hides an <span class="accent">amazing surprise</span>
+          </h1>
+
+          <div class="menu-tabs" role="group" aria-label="Menu categories">
+            <button class="menu-tab menu-tab--active" type="button" aria-pressed="true">
+              <span class="menu-tab__icon" aria-hidden="true">☕</span>
+              <span>Coffee</span>
+            </button>
+            <button class="menu-tab" type="button" aria-pressed="false">
+              <span class="menu-tab__icon" aria-hidden="true">🫖</span>
+              <span>Tea</span>
+            </button>
+            <button class="menu-tab" type="button" aria-pressed="false">
+              <span class="menu-tab__icon" aria-hidden="true">🍰</span>
+              <span>Dessert</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-1.webp" alt="Irish coffee">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Irish coffee</h2>
+                <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+              </div>
+              <p class="menu-card__price">$7.00</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-2.webp" alt="Kahlua coffee">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Kahlua coffee</h2>
+                <p>Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+              </div>
+              <p class="menu-card__price">$7.00</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-3.webp" alt="Honey raf">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Honey raf</h2>
+                <p>Espresso with frothed milk, cream and aromatic honey</p>
+              </div>
+              <p class="menu-card__price">$5.50</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-4.webp" alt="Ice cappuccino">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Ice cappuccino</h2>
+                <p>Cappuccino with soft thick foam in summer version with ice</p>
+              </div>
+              <p class="menu-card__price">$5.00</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-5.webp" alt="Espresso">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Espresso</h2>
+                <p>Classic black coffee</p>
+              </div>
+              <p class="menu-card__price">$4.50</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-6.webp" alt="Latte">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Latte</h2>
+                <p>Espresso coffee with the addition of steamed milk and dense milk foam</p>
+              </div>
+              <p class="menu-card__price">$5.50</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-7.webp" alt="Latte macchiato">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Latte macchiato</h2>
+                <p>Espresso with frothed milk and chocolate</p>
+              </div>
+              <p class="menu-card__price">$5.50</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-8.webp" alt="Coffee with cognac">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Coffee with cognac</h2>
+                <p>Fragrant black coffee with cognac and whipped cream</p>
+              </div>
+              <p class="menu-card__price">$6.50</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="round-button menu-more" type="button" aria-label="Show more menu items">
+          <span class="icon icon--refresh" aria-hidden="true"></span>
+        </button>
+      </section>
     </main>
 
     <footer class="footer container" id="contacts">
