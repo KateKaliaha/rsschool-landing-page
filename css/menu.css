@@ -77,8 +77,9 @@
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(4, 310px);
+  grid-template-columns: repeat(auto-fit, 310px);
   gap: 40px;
+  justify-content: center;
   width: 100%;
 }
 
@@ -156,5 +157,50 @@
 
   .menu-card:hover .menu-card__image-box img {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 1100px) {
+  .menu-title {
+    width: 100%;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 310px);
+  }
+
+  .menu-card:nth-child(n + 5) {
+    display: none;
+  }
+
+  .menu-more {
+    display: grid;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-title {
+    max-width: 100%;
+    font-size: 32px;
+    overflow-wrap: anywhere;
+  }
+
+  .menu-tabs {
+    gap: 8px;
+    width: 100%;
+  }
+
+  .menu-tab {
+    min-width: 0;
+  }
+
+  .menu-grid {
+    grid-template-columns: minmax(0, 310px);
+  }
+
+  .menu-card,
+  .menu-card__image-box {
+    width: 100%;
+    max-width: 310px;
   }
 }

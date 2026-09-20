@@ -587,8 +587,8 @@ p {
 }
 
 .mobile-app__image {
-  width: 630px;
-  height: 630px;
+  width: min(630px, 100%);
+  aspect-ratio: 1;
   object-fit: cover;
 }
 
@@ -694,7 +694,7 @@ p {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .navigation,
   .menu-link {
     display: none;
@@ -709,6 +709,36 @@ p {
     height: 52px;
     padding-inline: 8px;
   }
+}
+
+@media (max-width: 1100px) {
+  .hero {
+    padding: 100px 60px;
+  }
+
+  .primary-button .icon {
+    width: 20px;
+    margin-left: 8px;
+    opacity: 1;
+  }
+
+  .about__gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .about__image-box--small {
+    display: none;
+  }
+
+  .mobile-app {
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
+
+  .mobile-app__image {
+    width: 630px;
+    margin-inline: auto;
+  }
 
   .footer__inner {
     grid-template-columns: 1fr;
@@ -722,12 +752,86 @@ p {
     --page-gutter: 16px;
   }
 
+  .container {
+    width: auto;
+    margin-right: var(--page-gutter);
+    margin-left: var(--page-gutter);
+  }
+
   .header__actions {
-    gap: 20px;
+    gap: 12px;
+  }
+
+  .hero {
+    min-height: 552px;
+    padding: 60px 16px;
+  }
+
+  .hero__content {
+    width: 100%;
+  }
+
+  .hero__title {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .favorite {
+    min-height: 696px;
+  }
+
+  .slider__row,
+  .slider__viewport {
+    height: 532px;
+  }
+
+  .slider__row {
+    gap: 0;
+  }
+
+  .slider__button {
+    display: none;
+  }
+
+  .slider__viewport {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .favorite-slide,
+  .favorite-slide__image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .favorite-slide__image {
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .about__gallery {
+    gap: 40px;
+  }
+
+  .mobile-app {
+    gap: 40px;
+  }
+
+  .mobile-app__buttons {
+    flex-direction: column;
+  }
+
+  .mobile-app__image {
+    width: 100%;
+    max-width: 348px;
   }
 
   .footer {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .footer__inner {
