@@ -20,4 +20,4 @@ Landing Page task.
 
 ## Deployment
 
-The deployment link will be added after the first version is published.
+[Coffee House on GitHub Pages](https://katekaliaha.github.io/rsschool-landing-page/)
