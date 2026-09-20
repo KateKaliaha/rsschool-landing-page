@@ -13,6 +13,8 @@
     <script src="./js/theme.js" defer></script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="header container">
       <a class="logo" href="./" aria-label="Coffee House home page">
         <img class="logo__image logo__image--light" src="./assets/icons/logo-light.svg" alt="">
@@ -35,12 +37,14 @@
             type="button"
             data-theme-value="light"
             aria-label="Use light theme"
+            aria-pressed="true"
           ></button>
           <button
             class="theme-switch__button theme-switch__button--dark"
             type="button"
             data-theme-value="dark"
             aria-label="Use dark theme"
+            aria-pressed="false"
           ></button>
         </div>
 
@@ -55,7 +59,7 @@
       </div>
     </header>
 
-    <main class="home-main container">
+    <main class="home-main container" id="main-content" tabindex="-1">
       <section class="hero">
         <div class="hero__content">
           <h1 class="hero__title">

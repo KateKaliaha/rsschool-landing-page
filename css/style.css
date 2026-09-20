@@ -112,6 +112,28 @@ p {
   margin-inline: auto;
 }
 
+.skip-link {
+  position: fixed;
+  z-index: 10;
+  top: 12px;
+  left: 12px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: var(--color-background);
+  background-color: var(--color-text);
+  font-weight: 600;
+  transform: translateY(calc(-100% - 16px));
+  transition: transform var(--transition-duration) ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+main:focus-visible {
+  outline: none;
+}
+
 .accent {
   color: var(--color-accent);
   font-style: italic;
@@ -635,7 +657,7 @@ p {
     background-color var(--transition-duration) ease;
 }
 
-.contacts {
+.contacts address {
   font-style: normal;
 }
 
@@ -660,8 +682,13 @@ p {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-accent);
+  outline: 3px solid var(--color-text);
   outline-offset: 4px;
+}
+
+.hero :focus-visible,
+.footer :focus-visible {
+  outline-color: var(--color-text-inverse);
 }
 
 @media (hover: hover) and (pointer: fine) {
