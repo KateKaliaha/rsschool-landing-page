@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Explore the Coffee House menu and find your favorite drink or dessert."
+    >
+    <title>Menu | Coffee House</title>
+    <link rel="icon" href="../assets/icons/coffee-cup.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <script src="../js/theme.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="header container">
+      <a class="logo" href="../" aria-label="Coffee House home page">
+        <img class="logo__image logo__image--light" src="../assets/icons/logo-light.svg" alt="">
+        <img class="logo__image logo__image--dark" src="../assets/icons/logo-dark.svg" alt="">
+      </a>
+
+      <nav class="navigation" aria-label="Main navigation">
+        <ul class="navigation__list">
+          <li><a class="navigation__link" href="../#favorite">Favorite coffee</a></li>
+          <li><a class="navigation__link" href="../#about">About</a></li>
+          <li><a class="navigation__link" href="../#mobile-app">Mobile app</a></li>
+          <li><a class="navigation__link" href="#contacts">Contact us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <div class="theme-switch" role="group" aria-label="Color theme">
+          <button
+            class="theme-switch__button theme-switch__button--light"
+            type="button"
+            data-theme-value="light"
+            aria-label="Use light theme"
+            aria-pressed="true"
+          ></button>
+          <button
+            class="theme-switch__button theme-switch__button--dark"
+            type="button"
+            data-theme-value="dark"
+            aria-label="Use dark theme"
+            aria-pressed="false"
+          ></button>
+        </div>
+
+        <a class="menu-link menu-link--current" href="./" aria-current="page">
+          <span>Menu</span>
+          <span class="icon icon--coffee-cup" aria-hidden="true"></span>
+        </a>
+
+        <button class="burger-button" type="button" aria-label="Open menu">
+          <span class="icon icon--burger" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="menu-main container" id="main-content" tabindex="-1">
+      <section class="menu-section">
+        <div class="menu-offer">
+          <h1 class="menu-title">
+            Behind each of our cups hides an <span class="accent">amazing surprise</span>
+          </h1>
+
+          <div class="menu-tabs" role="group" aria-label="Menu categories">
+            <button class="menu-tab menu-tab--active" type="button" aria-pressed="true">
+              <span class="menu-tab__icon" aria-hidden="true">
+                <img src="../assets/icons/category-coffee.png" alt="">
+              </span>
+              <span>Coffee</span>
+            </button>
+            <button class="menu-tab" type="button" aria-pressed="false">
+              <span class="menu-tab__icon" aria-hidden="true">
+                <img src="../assets/icons/category-tea.png" alt="">
+              </span>
+              <span>Tea</span>
+            </button>
+            <button class="menu-tab" type="button" aria-pressed="false">
+              <span class="menu-tab__icon" aria-hidden="true">
+                <img src="../assets/icons/category-dessert.png" alt="">
+              </span>
+              <span>Dessert</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-grid">
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-1.webp" alt="Irish coffee">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Irish coffee</h2>
+                <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+              </div>
+              <p class="menu-card__price">$7.00</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-2.webp" alt="Kahlua coffee">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Kahlua coffee</h2>
+                <p>Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+              </div>
+              <p class="menu-card__price">$7.00</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-3.webp" alt="Honey raf">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Honey raf</h2>
+                <p>Espresso with frothed milk, cream and aromatic honey</p>
+              </div>
+              <p class="menu-card__price">$5.50</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-4.webp" alt="Ice cappuccino">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Ice cappuccino</h2>
+                <p>Cappuccino with soft thick foam in summer version with ice</p>
+              </div>
+              <p class="menu-card__price">$5.00</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-5.webp" alt="Espresso">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Espresso</h2>
+                <p>Classic black coffee</p>
+              </div>
+              <p class="menu-card__price">$4.50</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-6.webp" alt="Latte">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Latte</h2>
+                <p>Espresso coffee with the addition of steamed milk and dense milk foam</p>
+              </div>
+              <p class="menu-card__price">$5.50</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-7.webp" alt="Latte macchiato">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Latte macchiato</h2>
+                <p>Espresso with frothed milk and chocolate</p>
+              </div>
+              <p class="menu-card__price">$5.50</p>
+            </div>
+          </article>
+
+          <article class="menu-card">
+            <div class="menu-card__image-box">
+              <img src="../assets/images/coffee-8.webp" alt="Coffee with cognac">
+            </div>
+            <div class="menu-card__content">
+              <div class="menu-card__heading">
+                <h2>Coffee with cognac</h2>
+                <p>Fragrant black coffee with cognac and whipped cream</p>
+              </div>
+              <p class="menu-card__price">$6.50</p>
+            </div>
+          </article>
+        </div>
+
+        <button class="round-button menu-more" type="button" aria-label="Show more menu items">
+          <span class="icon icon--refresh" aria-hidden="true"></span>
+        </button>
+      </section>
+    </main>
+
+    <footer class="footer container" id="contacts">
+      <div class="footer__inner">
+        <div class="footer__socials">
+          <h2 class="footer__title">
+            Sip, Savor, Smile. <span class="accent">It’s coffee time!</span>
+          </h2>
+          <ul class="social-list" aria-label="Social media">
+            <li>
+              <a class="social-link" href="https://twitter.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <span class="icon icon--twitter" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <span class="icon icon--instagram" aria-hidden="true"></span>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <span class="icon icon--facebook" aria-hidden="true"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contacts">
+          <h3 class="contacts__title">Contact us</h3>
+          <address>
+            <ul class="contacts__list">
+              <li>
+                <a class="contacts__link" href="https://maps.google.com/?q=8558+Green+Rd,+LA" target="_blank" rel="noopener noreferrer">
+                  <span class="icon icon--location" aria-hidden="true"></span>
+                  <span>8558 Green Rd., LA</span>
+                </a>
+              </li>
+              <li>
+                <a class="contacts__link" href="tel:+16035550123">
+                  <span class="icon icon--phone" aria-hidden="true"></span>
+                  <span>+1 (603) 555-0123</span>
+                </a>
+              </li>
+              <li class="contacts__item">
+                <span class="icon icon--clock" aria-hidden="true"></span>
+                <span>Mon–Sat: 9:00–23:00</span>
+              </li>
+            </ul>
+          </address>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
