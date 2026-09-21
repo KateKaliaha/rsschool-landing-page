@@ -64,15 +64,22 @@
   transition: background-color var(--transition-duration) ease;
 }
 
+.menu-tab__icon img {
+  width: 16px;
+  height: 16px;
+  max-width: none;
+  object-fit: contain;
+}
+
 .menu-tab--active {
-  border-color: var(--color-border-inverse);
-  color: var(--color-background);
-  background-color: var(--color-border-inverse);
+  border-color: var(--color-control-active);
+  color: var(--color-control-active-text);
+  background-color: var(--color-control-active);
   cursor: default;
 }
 
 .menu-tab--active .menu-tab__icon {
-  background-color: var(--color-background);
+  background-color: var(--color-control-icon);
 }
 
 .menu-grid {
@@ -183,6 +190,10 @@
     max-width: 100%;
     font-size: 32px;
     overflow-wrap: anywhere;
+  }
+
+  .menu-title .accent {
+    display: inline-block;
   }
 
   .menu-tabs {

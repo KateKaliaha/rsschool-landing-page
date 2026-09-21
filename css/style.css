@@ -24,6 +24,9 @@
   --color-overlay: rgb(64 63 61 / 80%);
   --color-border: #c1b6ad;
   --color-border-inverse: #665f55;
+  --color-control-active: var(--color-container);
+  --color-control-active-text: var(--color-text-inverse);
+  --color-control-icon: var(--color-background);
   --font-family: "Inter", sans-serif;
   --container-width: 1360px;
   --page-gutter: 40px;
@@ -55,6 +58,8 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
@@ -621,8 +626,9 @@ main:focus-visible {
 }
 
 .footer {
-  margin-top: var(--section-gap);
+  margin-top: auto;
   margin-bottom: 40px;
+  padding-top: var(--section-gap);
   color: var(--color-text-inverse);
 }
 
@@ -655,7 +661,7 @@ main:focus-visible {
   place-items: center;
   width: 60px;
   height: 60px;
-  border: 1px solid var(--color-border-inverse);
+  border: 1px solid var(--color-border);
   border-radius: 50%;
   color: var(--color-text-inverse);
   transition:
@@ -736,7 +742,7 @@ main:focus-visible {
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   .navigation,
   .menu-link {
     display: none;
@@ -884,6 +890,10 @@ main:focus-visible {
 
   .footer__title {
     font-size: 32px;
+  }
+
+  .footer__title .accent {
+    display: inline-block;
   }
 }
 
