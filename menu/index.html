@@ -9,9 +9,10 @@
     >
     <title>Menu | Coffee House</title>
     <link rel="icon" href="../assets/icons/coffee-cup.svg" type="image/svg+xml">
+    <script src="../js/theme.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/menu.css">
-    <script src="../js/theme.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -22,12 +23,18 @@
         <img class="logo__image logo__image--dark" src="../assets/icons/logo-dark.svg" alt="">
       </a>
 
-      <nav class="navigation" aria-label="Main navigation">
+      <nav class="navigation" id="main-navigation" data-navigation aria-label="Main navigation">
         <ul class="navigation__list">
           <li><a class="navigation__link" href="../#favorite">Favorite coffee</a></li>
           <li><a class="navigation__link" href="../#about">About</a></li>
           <li><a class="navigation__link" href="../#mobile-app">Mobile app</a></li>
           <li><a class="navigation__link" href="#contacts">Contact us</a></li>
+          <li class="navigation__menu-item">
+            <a class="navigation__link navigation__menu-link navigation__menu-link--current" href="./" aria-current="page">
+              <span>Menu</span>
+              <span class="icon icon--coffee-cup" aria-hidden="true"></span>
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -54,8 +61,16 @@
           <span class="icon icon--coffee-cup" aria-hidden="true"></span>
         </a>
 
-        <button class="burger-button" type="button" aria-label="Open menu">
+        <button
+          class="burger-button"
+          type="button"
+          data-burger-button
+          aria-label="Open menu"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+        >
           <span class="icon icon--burger" aria-hidden="true"></span>
+          <span class="icon icon--close" aria-hidden="true"></span>
         </button>
       </div>
     </header>
