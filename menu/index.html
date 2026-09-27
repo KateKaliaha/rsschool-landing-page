@@ -106,9 +106,16 @@
           </div>
         </div>
 
-        <div class="menu-grid" data-menu-grid></div>
+        <div class="menu-grid" id="menu-grid" data-menu-grid></div>
 
-        <button class="round-button menu-more" type="button" aria-label="Show more menu items">
+        <button
+          class="round-button menu-more"
+          type="button"
+          data-menu-more
+          aria-label="Show more menu items"
+          aria-controls="menu-grid"
+          hidden
+        >
           <span class="icon icon--refresh" aria-hidden="true"></span>
         </button>
       </section>

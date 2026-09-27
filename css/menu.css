@@ -144,7 +144,7 @@
 }
 
 .menu-more {
-  display: none;
+  display: grid;
 }
 
 .icon--refresh {
