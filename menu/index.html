@@ -121,6 +121,43 @@
       </section>
     </main>
 
+    <dialog class="product-modal" data-product-modal aria-labelledby="product-modal-title">
+      <div class="product-modal__layout">
+        <div class="product-modal__image-box">
+          <img data-modal-image alt="">
+        </div>
+
+        <div class="product-modal__content">
+          <div class="product-modal__heading">
+            <h2 id="product-modal-title" data-modal-title></h2>
+            <p data-modal-description></p>
+          </div>
+
+          <fieldset class="product-modal__group">
+            <legend>Size</legend>
+            <div class="product-modal__options" data-modal-sizes></div>
+          </fieldset>
+
+          <fieldset class="product-modal__group">
+            <legend>Additives</legend>
+            <div class="product-modal__options" data-modal-additives></div>
+          </fieldset>
+
+          <div class="product-modal__total">
+            <span>Total:</span>
+            <strong data-modal-price aria-live="polite"></strong>
+          </div>
+
+          <div class="product-modal__note">
+            <span class="product-modal__info" aria-hidden="true">i</span>
+            <p>The cost is not final. Download our mobile application to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+          </div>
+
+          <button class="product-modal__close" type="button" data-modal-close>Close</button>
+        </div>
+      </div>
+    </dialog>
+
     <footer class="footer container" id="contacts">
       <div class="footer__inner">
         <div class="footer__socials">
