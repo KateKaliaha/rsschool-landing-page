@@ -12,6 +12,7 @@
     <script src="./js/theme.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/navigation.js" defer></script>
+    <script src="./js/slider.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -95,50 +96,52 @@
           Choose your <span class="accent">favorite</span> coffee
         </h2>
 
-        <div class="slider">
+        <div class="slider" data-slider role="region" aria-roledescription="carousel" aria-label="Favorite coffee">
           <div class="slider__row">
-            <button class="round-button slider__button" type="button" aria-label="Previous coffee">
+            <button class="round-button slider__button" type="button" data-slider-direction="previous" aria-label="Previous coffee">
               <span class="icon icon--arrow-left" aria-hidden="true"></span>
             </button>
 
-            <div class="slider__viewport">
-              <article class="favorite-slide">
-                <img class="favorite-slide__image" src="./assets/images/favorite-1.webp" alt="S’mores Frappuccino">
-                <div class="favorite-slide__description">
-                  <h3 class="favorite-slide__title">S’mores Frappuccino</h3>
-                  <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
-                  <p class="favorite-slide__price">$5.50</p>
-                </div>
-              </article>
+            <div class="slider__viewport" data-slider-viewport>
+              <div class="slider__track" data-slider-track>
+                <article class="favorite-slide">
+                  <img class="favorite-slide__image" src="./assets/images/favorite-1.webp" alt="S’mores Frappuccino">
+                  <div class="favorite-slide__description">
+                    <h3 class="favorite-slide__title">S’mores Frappuccino</h3>
+                    <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
+                    <p class="favorite-slide__price">$5.50</p>
+                  </div>
+                </article>
 
-              <article class="favorite-slide" hidden>
-                <img class="favorite-slide__image" src="./assets/images/favorite-2.webp" alt="Caramel Macchiato">
-                <div class="favorite-slide__description">
-                  <h3 class="favorite-slide__title">Caramel Macchiato</h3>
-                  <p>Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
-                  <p class="favorite-slide__price">$5.00</p>
-                </div>
-              </article>
+                <article class="favorite-slide">
+                  <img class="favorite-slide__image" src="./assets/images/favorite-2.webp" alt="Caramel Macchiato">
+                  <div class="favorite-slide__description">
+                    <h3 class="favorite-slide__title">Caramel Macchiato</h3>
+                    <p>Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
+                    <p class="favorite-slide__price">$5.00</p>
+                  </div>
+                </article>
 
-              <article class="favorite-slide" hidden>
-                <img class="favorite-slide__image" src="./assets/images/favorite-3.webp" alt="Ice coffee">
-                <div class="favorite-slide__description">
-                  <h3 class="favorite-slide__title">Ice coffee</h3>
-                  <p>A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
-                  <p class="favorite-slide__price">$4.50</p>
-                </div>
-              </article>
+                <article class="favorite-slide">
+                  <img class="favorite-slide__image" src="./assets/images/favorite-3.webp" alt="Ice coffee">
+                  <div class="favorite-slide__description">
+                    <h3 class="favorite-slide__title">Ice coffee</h3>
+                    <p>A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
+                    <p class="favorite-slide__price">$4.50</p>
+                  </div>
+                </article>
+              </div>
             </div>
 
-            <button class="round-button slider__button" type="button" aria-label="Next coffee">
+            <button class="round-button slider__button" type="button" data-slider-direction="next" aria-label="Next coffee">
               <span class="icon icon--arrow-right" aria-hidden="true"></span>
             </button>
           </div>
 
-          <div class="slider__pagination" role="group" aria-label="Slide 1 of 3">
-            <span class="slider__control slider__control--active"></span>
-            <span class="slider__control"></span>
-            <span class="slider__control"></span>
+          <div class="slider__pagination" data-slider-pagination role="group" aria-label="Slide 1 of 3">
+            <button class="slider__control slider__control--active" type="button" data-slide-index="0" aria-label="Go to slide 1" aria-current="true"></button>
+            <button class="slider__control" type="button" data-slide-index="1" aria-label="Go to slide 2"></button>
+            <button class="slider__control" type="button" data-slide-index="2" aria-label="Go to slide 3"></button>
           </div>
         </div>
       </section>
