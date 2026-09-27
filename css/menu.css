@@ -175,14 +175,6 @@
   .menu-grid {
     grid-template-columns: repeat(2, 310px);
   }
-
-  .menu-card:nth-child(n + 5) {
-    display: none;
-  }
-
-  .menu-more {
-    display: grid;
-  }
 }
 
 @media (max-width: 767px) {
