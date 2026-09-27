@@ -9,9 +9,12 @@
     >
     <title>Menu | Coffee House</title>
     <link rel="icon" href="../assets/icons/coffee-cup.svg" type="image/svg+xml">
+    <script src="../js/theme.js"></script>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/menu.css">
-    <script src="../js/theme.js" defer></script>
+    <script src="../js/navigation.js" defer></script>
+    <script src="../js/products.js" defer></script>
+    <script src="../js/menu.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -22,12 +25,18 @@
         <img class="logo__image logo__image--dark" src="../assets/icons/logo-dark.svg" alt="">
       </a>
 
-      <nav class="navigation" aria-label="Main navigation">
+      <nav class="navigation" id="main-navigation" data-navigation aria-label="Main navigation">
         <ul class="navigation__list">
           <li><a class="navigation__link" href="../#favorite">Favorite coffee</a></li>
           <li><a class="navigation__link" href="../#about">About</a></li>
           <li><a class="navigation__link" href="../#mobile-app">Mobile app</a></li>
           <li><a class="navigation__link" href="#contacts">Contact us</a></li>
+          <li class="navigation__menu-item">
+            <a class="navigation__link navigation__menu-link navigation__menu-link--current" href="./" aria-current="page">
+              <span>Menu</span>
+              <span class="icon icon--coffee-cup" aria-hidden="true"></span>
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -54,8 +63,16 @@
           <span class="icon icon--coffee-cup" aria-hidden="true"></span>
         </a>
 
-        <button class="burger-button" type="button" aria-label="Open menu">
+        <button
+          class="burger-button"
+          type="button"
+          data-burger-button
+          aria-label="Open menu"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+        >
           <span class="icon icon--burger" aria-hidden="true"></span>
+          <span class="icon icon--close" aria-hidden="true"></span>
         </button>
       </div>
     </header>
@@ -68,19 +85,19 @@
           </h1>
 
           <div class="menu-tabs" role="group" aria-label="Menu categories">
-            <button class="menu-tab menu-tab--active" type="button" aria-pressed="true">
+            <button class="menu-tab menu-tab--active" type="button" data-category="coffee" aria-pressed="true">
               <span class="menu-tab__icon" aria-hidden="true">
                 <img src="../assets/icons/category-coffee.png" alt="">
               </span>
               <span>Coffee</span>
             </button>
-            <button class="menu-tab" type="button" aria-pressed="false">
+            <button class="menu-tab" type="button" data-category="tea" aria-pressed="false">
               <span class="menu-tab__icon" aria-hidden="true">
                 <img src="../assets/icons/category-tea.png" alt="">
               </span>
               <span>Tea</span>
             </button>
-            <button class="menu-tab" type="button" aria-pressed="false">
+            <button class="menu-tab" type="button" data-category="dessert" aria-pressed="false">
               <span class="menu-tab__icon" aria-hidden="true">
                 <img src="../assets/icons/category-dessert.png" alt="">
               </span>
@@ -89,117 +106,55 @@
           </div>
         </div>
 
-        <div class="menu-grid">
-          <article class="menu-card">
-            <div class="menu-card__image-box">
-              <img src="../assets/images/coffee-1.webp" alt="Irish coffee">
-            </div>
-            <div class="menu-card__content">
-              <div class="menu-card__heading">
-                <h2>Irish coffee</h2>
-                <p>Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-              </div>
-              <p class="menu-card__price">$7.00</p>
-            </div>
-          </article>
+        <div class="menu-grid" id="menu-grid" data-menu-grid></div>
 
-          <article class="menu-card">
-            <div class="menu-card__image-box">
-              <img src="../assets/images/coffee-2.webp" alt="Kahlua coffee">
-            </div>
-            <div class="menu-card__content">
-              <div class="menu-card__heading">
-                <h2>Kahlua coffee</h2>
-                <p>Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
-              </div>
-              <p class="menu-card__price">$7.00</p>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-card__image-box">
-              <img src="../assets/images/coffee-3.webp" alt="Honey raf">
-            </div>
-            <div class="menu-card__content">
-              <div class="menu-card__heading">
-                <h2>Honey raf</h2>
-                <p>Espresso with frothed milk, cream and aromatic honey</p>
-              </div>
-              <p class="menu-card__price">$5.50</p>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-card__image-box">
-              <img src="../assets/images/coffee-4.webp" alt="Ice cappuccino">
-            </div>
-            <div class="menu-card__content">
-              <div class="menu-card__heading">
-                <h2>Ice cappuccino</h2>
-                <p>Cappuccino with soft thick foam in summer version with ice</p>
-              </div>
-              <p class="menu-card__price">$5.00</p>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-card__image-box">
-              <img src="../assets/images/coffee-5.webp" alt="Espresso">
-            </div>
-            <div class="menu-card__content">
-              <div class="menu-card__heading">
-                <h2>Espresso</h2>
-                <p>Classic black coffee</p>
-              </div>
-              <p class="menu-card__price">$4.50</p>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-card__image-box">
-              <img src="../assets/images/coffee-6.webp" alt="Latte">
-            </div>
-            <div class="menu-card__content">
-              <div class="menu-card__heading">
-                <h2>Latte</h2>
-                <p>Espresso coffee with the addition of steamed milk and dense milk foam</p>
-              </div>
-              <p class="menu-card__price">$5.50</p>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-card__image-box">
-              <img src="../assets/images/coffee-7.webp" alt="Latte macchiato">
-            </div>
-            <div class="menu-card__content">
-              <div class="menu-card__heading">
-                <h2>Latte macchiato</h2>
-                <p>Espresso with frothed milk and chocolate</p>
-              </div>
-              <p class="menu-card__price">$5.50</p>
-            </div>
-          </article>
-
-          <article class="menu-card">
-            <div class="menu-card__image-box">
-              <img src="../assets/images/coffee-8.webp" alt="Coffee with cognac">
-            </div>
-            <div class="menu-card__content">
-              <div class="menu-card__heading">
-                <h2>Coffee with cognac</h2>
-                <p>Fragrant black coffee with cognac and whipped cream</p>
-              </div>
-              <p class="menu-card__price">$6.50</p>
-            </div>
-          </article>
-        </div>
-
-        <button class="round-button menu-more" type="button" aria-label="Show more menu items">
+        <button
+          class="round-button menu-more"
+          type="button"
+          data-menu-more
+          aria-label="Show more menu items"
+          aria-controls="menu-grid"
+          hidden
+        >
           <span class="icon icon--refresh" aria-hidden="true"></span>
         </button>
       </section>
     </main>
+
+    <dialog class="product-modal" data-product-modal aria-labelledby="product-modal-title">
+      <div class="product-modal__layout">
+        <div class="product-modal__image-box" data-modal-image-box></div>
+
+        <div class="product-modal__content">
+          <div class="product-modal__heading">
+            <h2 id="product-modal-title" data-modal-title>Product details</h2>
+            <p data-modal-description></p>
+          </div>
+
+          <fieldset class="product-modal__group">
+            <legend>Size</legend>
+            <div class="product-modal__options" data-modal-sizes></div>
+          </fieldset>
+
+          <fieldset class="product-modal__group">
+            <legend>Additives</legend>
+            <div class="product-modal__options" data-modal-additives></div>
+          </fieldset>
+
+          <div class="product-modal__total">
+            <span>Total:</span>
+            <strong data-modal-price aria-live="polite"></strong>
+          </div>
+
+          <div class="product-modal__note">
+            <span class="product-modal__info" aria-hidden="true">i</span>
+            <p>The cost is not final. Download our mobile application to see the final price and place your order. Earn loyalty points and enjoy your favorite coffee with up to 20% discount.</p>
+          </div>
+
+          <button class="product-modal__close" type="button" data-modal-close>Close</button>
+        </div>
+      </div>
+    </dialog>
 
     <footer class="footer container" id="contacts">
       <div class="footer__inner">
