@@ -104,6 +104,24 @@ function renderModalOptions() {
   modalAdditives.replaceChildren(...additiveButtons);
 }
 
+function updateModalOptionStates() {
+  modalSizes.querySelectorAll("[data-size-index]").forEach((option) => {
+    const isActive = Number(option.dataset.sizeIndex) === selectedSizeIndex;
+    option.classList.toggle("product-option--active", isActive);
+    option.setAttribute("aria-pressed", String(isActive));
+  });
+
+  modalAdditives
+    .querySelectorAll("[data-additive-index]")
+    .forEach((option) => {
+      const isActive = selectedAdditives.has(
+        Number(option.dataset.additiveIndex),
+      );
+      option.classList.toggle("product-option--active", isActive);
+      option.setAttribute("aria-pressed", String(isActive));
+    });
+}
+
 function openProductModal(productId, card) {
   const product = PRODUCTS.find((item) => item.id === productId);
 
@@ -198,7 +216,7 @@ modalSizes.addEventListener("click", (event) => {
   }
 
   selectedSizeIndex = Number(option.dataset.sizeIndex);
-  renderModalOptions();
+  updateModalOptionStates();
   updateModalPrice();
 });
 
@@ -217,7 +235,7 @@ modalAdditives.addEventListener("click", (event) => {
     selectedAdditives.add(additiveIndex);
   }
 
-  renderModalOptions();
+  updateModalOptionStates();
   updateModalPrice();
 });
 

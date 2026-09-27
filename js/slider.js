@@ -38,7 +38,12 @@ function updateSliderState() {
   sliderControls.forEach((control, index) => {
     const isActive = index === currentIndex;
     control.classList.toggle("slider__control--active", isActive);
-    control.toggleAttribute("aria-current", isActive);
+
+    if (isActive) {
+      control.setAttribute("aria-current", "true");
+    } else {
+      control.removeAttribute("aria-current");
+    }
   });
 
   sliderPagination.setAttribute(
