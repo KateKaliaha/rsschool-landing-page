@@ -5,7 +5,8 @@ const menuGrid = document.querySelector("[data-menu-grid]");
 const menuMoreButton = document.querySelector("[data-menu-more]");
 const categoryTabs = Array.from(document.querySelectorAll("[data-category]"));
 const productModal = document.querySelector("[data-product-modal]");
-const modalImage = productModal.querySelector("[data-modal-image]");
+const modalImageBox = productModal.querySelector("[data-modal-image-box]");
+const modalImage = document.createElement("img");
 const modalTitle = productModal.querySelector("[data-modal-title]");
 const modalDescription = productModal.querySelector("[data-modal-description]");
 const modalPrice = productModal.querySelector("[data-modal-price]");
@@ -136,6 +137,7 @@ function openProductModal(productId, card) {
 
   modalImage.src = `../assets/images/${selectedProduct.image}`;
   modalImage.alt = selectedProduct.name;
+  modalImageBox.replaceChildren(modalImage);
   modalTitle.textContent = selectedProduct.name;
   modalDescription.textContent = selectedProduct.description;
   renderModalOptions();
