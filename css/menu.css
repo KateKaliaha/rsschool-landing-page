@@ -264,8 +264,27 @@
   background-color: #665f55;
 }
 
+[data-theme="dark"] .product-option--active {
+  border-color: #292826;
+  background-color: #292826;
+}
+
 .product-option--active .product-option__marker {
   background-color: #e1d4c9;
+}
+
+[data-theme="dark"] .product-option__marker {
+  color: #e1d4c9;
+  background-color: #665f55;
+}
+
+.product-option:focus-visible {
+  outline: 2px solid #665f55;
+  outline-offset: 1px;
+}
+
+[data-theme="dark"] .product-option:focus-visible {
+  outline-color: #292826;
 }
 
 .product-modal__heading h2,
